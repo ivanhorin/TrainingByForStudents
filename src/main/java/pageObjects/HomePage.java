@@ -10,7 +10,7 @@ public class HomePage extends AbstractPage {
 
     private static final Logger LOG = Logger.getLogger(HomePage.class);
 
-    private By signInButton = By.xpath("//p[@class='header-auth__signin']//span");
+    private By signInButton = By.className("header-auth__signin");
 
     private By topRightCornerUserNameElement = By.className("user-info__name");
 

@@ -11,6 +11,7 @@ public class SignInPageTest extends BaseTest {
               .proceedToHomePage()
               .clickSignInButton()
                 .enterEmail("incorrectmail@gmail.com")
+                .clickContinueButton()
                 .enterPassword("incorrectPassword")
                 .clickSignInButton();
         new SignInPage()

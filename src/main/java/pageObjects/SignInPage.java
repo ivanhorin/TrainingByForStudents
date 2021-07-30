@@ -9,17 +9,25 @@ public class SignInPage extends AbstractPage{
 
     private static final Logger LOG = Logger.getLogger(SignInPage.class);
 
-    private By mailInput = By.id("signInEmail");
+    private By mailInput = By.id("username");
 
-    private By passwordInput = By.id("signInPassword");
+    private By passwordInput = By.id("password");
 
-    private By signInButton = By.className("popup-reg-sign-in-form__sign-in");
+    private By signInButton = By.id("kc-login");
 
-    private By loginFailedErrorMessage = By.xpath("//div[text()='Login failed. Please try again.']");
+    private By continueButton = By.id("kc-login-next");
+
+    private By loginFailedErrorMessage = By.xpath("//span[text()=\"We can't find user with such credentials.\"]");
 
     public SignInPage enterEmail(String email){
         getElement(mailInput).sendKeys(email);
         LOG.info("Mail was entered.");
+        return this;
+    }
+
+    public  SignInPage clickContinueButton(){
+        getElement(continueButton).click();
+        LOG.info("Continue button clicked.");
         return this;
     }
 

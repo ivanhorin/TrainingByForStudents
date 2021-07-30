@@ -14,7 +14,7 @@ import java.util.List;
 
 public class AbstractPage {
 
-    private static WebDriverWait wait =  new WebDriverWait(DriverFactory.getDriver(), 20);
+    private static WebDriverWait wait =  new WebDriverWait(DriverFactory.getDriver(), 10);
 
      AbstractPage() {
     }
@@ -35,9 +35,7 @@ public class AbstractPage {
 
     public boolean isDisplayed(By locator) {
         try {
-            return DriverFactory
-                  .getDriver()
-                  .findElement(locator)
+            return getElement(locator)
                   .isDisplayed();
         } catch (NoSuchElementException | TimeoutException e) {
             return false;
