@@ -4,7 +4,7 @@ public interface Constants {
 
     //Constants should be stored in Enums or files
     interface DriverConfigs{
-        String CHROME_NAME = "webdriver.chrome.driver";
+        String CHROME_NAME = "webdriver.chrome.driverv";
         String FIREFOX_NAME = "webdriver.gecko.driver";
         String EDGE_NAME = "webdriver.edge.driver";
 
